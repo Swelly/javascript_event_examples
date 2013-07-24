@@ -7,15 +7,16 @@ window.onload = function () {
  //listener example - "click"
   var myTable = document.getElementById('outside-table');
   myTable.addEventListener("click", modifyTableText);
-//body
-  document.getElementById('home').onmouseover = function (event) {
-    console.log(event);
-    document.getElementById('x-coord').innerText = event.x + ' :x coord';
-    document.getElementById('y-coord').innerText = event.y + ' :y coord';
-  };
+//body coordinates
+  // document.getElementById('home').onmouseover = function (event) {
+  //   console.log(event);
+  //   document.getElementById('x-coord').innerText = event.x + ' :x coord';
+  //   document.getElementById('y-coord').innerText = event.y + ' :y coord';
+  // };
 
 //h1 click
   document.getElementsByTagName("h1")[0].onclick = function (event) {
+    console.log(this);
     alert("You Clicked the h1!");
   };
 //h2 click
@@ -28,6 +29,7 @@ window.onload = function () {
 //click box
   document.getElementById("test-box").onclick = function (event) {
     alert("You Clicked the box!");
+    this.innerHTML = "Nice pop-up eh?";
   };
 //mouseovers
   document.getElementById('danger_box').onmouseover = function (event) {
